@@ -1,0 +1,16 @@
+[
+{
+  "modid": "miscrails",
+  "name": "Better Railroads",
+  "description": "A mod for better utilizing rails and carts",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Dongle12"],
+  "credits": "My testers and friends, without whom this mod would still be broken",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

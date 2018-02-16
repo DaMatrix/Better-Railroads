@@ -1,0 +1,13 @@
+tile.miscrails.speed_rail.name=铁轨
+tile.miscrails.powered_speed_rail.name=动力铁轨
+tile.miscrails.brake_rail.name=捕获铁轨
+tile.miscrails.deceleration_rail.name=减速铁轨
+item.miscrails.wrench.name=轨道扳手
+item.miscrails.speed_cart.name=快速矿车
+itemGroup.MiscRails=更好的轨道
+tile.miscrails.launcher_block.name=车挡
+tile.miscrails.wooden_rail.name=木轨
+tile.miscrails.launching_rail.name=启动铁轨
+tile.miscrails.intersection_rail.name=交叉铁轨
+tile.miscrails.detection_rail.name=探测铁轨
+tile.miscrails.jump_rail.name=跳跃铁轨

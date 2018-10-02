@@ -1,0 +1,26 @@
+{ 
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    "BBB",
+    "ABA"  ],
+  "key": {
+    "A": [
+      {
+        "item": "minecraft:iron_ingot",
+        "data": 0
+      }
+    ],
+    "B": [
+      {
+        "item": "minecraft:stick",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "better_railroads:intersection_rail",
+    "data": 0,
+    "count": 6
+  }
+}

@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "shape=north_south": { "model": "miscrails:intersection_rail/intersection_rail_flat" },
-        "shape=east_west": { "model": "miscrails:intersection_rail/intersection_rail_flat", "y": 90 }
-    }
-}

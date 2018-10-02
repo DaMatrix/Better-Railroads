@@ -1,0 +1,6 @@
+{
+    "parent": "block/rail_raised_sw",
+    "textures": {
+        "rail": "better_railroads:deceleration_rail_powered"
+    }
+}

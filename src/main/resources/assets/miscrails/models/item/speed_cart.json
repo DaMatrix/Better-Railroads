@@ -1,6 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "miscrails:speed_cart_item"
-    }
-}

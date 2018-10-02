@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "powered=false,shape=north_south":  { "model": "better_railroads:jump_rail/jump_rail_flat" },
+        "powered=false,shape=east_west":  { "model": "better_railroads:jump_rail/jump_rail_flat", "y": 90 },
+
+        "powered=true,shape=north_south":  { "model": "better_railroads:jump_rail/jump_rail_active_flat" },
+        "powered=true,shape=east_west":  { "model": "better_railroads:jump_rail/jump_rail_active_flat", "y": 90 }
+    }
+}

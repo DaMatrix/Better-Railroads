@@ -1,0 +1,25 @@
+{ 
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "BBB"  ],
+  "key": {
+    "A": [
+      {
+        "item": "minecraft:iron_ingot",
+        "data": 0
+      }
+    ],
+    "B": [
+      {
+        "item": "minecraft:log",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "miscrails:launcher_block",
+    "data": 0
+  }
+}

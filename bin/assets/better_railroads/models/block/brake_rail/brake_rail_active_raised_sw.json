@@ -1,0 +1,6 @@
+{
+    "parent": "block/rail_raised_sw",
+    "textures": {
+        "rail": "better_railroads:brake_rail_powered"
+    }
+}

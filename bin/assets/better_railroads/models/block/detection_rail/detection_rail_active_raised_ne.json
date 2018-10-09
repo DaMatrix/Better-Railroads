@@ -1,0 +1,6 @@
+{
+    "parent": "block/rail_raised_ne",
+    "textures": {
+        "rail": "better_railroads:detection_rail_powered"
+    }
+}

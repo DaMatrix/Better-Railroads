@@ -1,0 +1,39 @@
+[11:23:14] [main/INFO]: Logging in with username & password
+[11:23:18] [main/INFO]: Setting user: Dongle12
+[11:23:22] [main/WARN]: Skipping bad option: lastServer:
+[11:23:22] [main/INFO]: LWJGL Version: 2.9.4
+[11:23:25] [main/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Better Railroads, FMLFileResourcePack:NBTEdit, FMLFileResourcePack:Rail Roads
+[11:23:28] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[11:23:28] [Thread-5/INFO]: Initializing LWJGL OpenAL
+[11:23:28] [Thread-5/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[11:23:28] [Thread-5/INFO]: OpenAL initialized.
+[11:23:29] [Sound Library Loader/INFO]: Sound engine started
+[11:23:33] [main/INFO]: Created: 512x512 textures-atlas
+[11:23:35] [main/WARN]: Skipping bad option: lastServer:
+[11:23:36] [main/INFO]: Narrator library for x64 successfully loaded
+[11:23:45] [Server thread/INFO]: Starting integrated minecraft server version 1.12.2
+[11:23:45] [Server thread/INFO]: Generating keypair
+[11:23:46] [Server thread/INFO]: Loaded 488 advancements
+[11:23:46] [Server thread/INFO]: Preparing start region for level 0
+[11:23:47] [Server thread/INFO]: Changing view distance to 12, from 10
+[11:23:48] [Server thread/INFO]: Dongle12[local:E:bdb36563] logged in with entity id 0 at (64.84079830264766, 57.78803823155942, 994.1663375960849)
+[11:23:48] [Server thread/INFO]: Dongle12 joined the game
+[11:23:50] [Server thread/INFO]: Saving and pausing game...
+[11:23:50] [Server thread/INFO]: Saving chunks for level 'New World'/overworld
+[11:23:50] [Server thread/INFO]: Saving chunks for level 'New World'/the_nether
+[11:23:50] [Server thread/INFO]: Saving chunks for level 'New World'/the_end
+[11:23:50] [main/INFO]: Loaded 20 advancements
+[11:25:03] [main/INFO]: Loaded 22 advancements
+[11:26:21] [Server thread/INFO]: Saving and pausing game...
+[11:26:21] [Server thread/INFO]: Saving chunks for level 'New World'/overworld
+[11:26:21] [Server thread/INFO]: Saving chunks for level 'New World'/the_nether
+[11:26:21] [Server thread/INFO]: Saving chunks for level 'New World'/the_end
+[11:26:21] [Server thread/INFO]: Stopping server
+[11:26:21] [Server thread/INFO]: Saving players
+[11:26:21] [Server thread/INFO]: Dongle12 lost connection: Disconnected
+[11:26:21] [Server thread/INFO]: Dongle12 left the game
+[11:26:21] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[11:26:21] [Server thread/INFO]: Saving worlds
+[11:26:21] [Server thread/INFO]: Saving chunks for level 'New World'/overworld
+[11:26:21] [Server thread/INFO]: Saving chunks for level 'New World'/the_nether
+[11:26:21] [Server thread/INFO]: Saving chunks for level 'New World'/the_end

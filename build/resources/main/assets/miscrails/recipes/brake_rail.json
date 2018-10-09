@@ -1,0 +1,24 @@
+{ 
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA"  ],
+  "key": {
+    "A": [
+      {
+        "item": "minecraft:redstone_torch",
+        "data": 0
+      }
+    ],
+    "B": [
+      {
+        "item": "miscrails:deceleration_rail",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "miscrails:brake_rail",
+    "data": 0,
+    "count": 1
+  }
+}

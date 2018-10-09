@@ -24,11 +24,6 @@ public class ModCarts {
     @SideOnly(Side.CLIENT)
     public static void initModels() {
     	System.out.println("INIT MODELS CALLED");
-    	RenderingRegistry.registerEntityRenderingHandler(MinecartEmpty.class, new IRenderFactory<MinecartEmpty>(){
-    		@Override
-    		public Render<? super MinecartEmpty> createRenderFor(RenderManager manager){
-    			return new RenderMinecartEmpty(manager);
-    		}
-    	});
+    	RenderingRegistry.registerEntityRenderingHandler(MinecartEmpty.class, RenderMinecartEmpty.FACTORY_EMPTY);
     }
 }

@@ -17,7 +17,7 @@ gradle-app.setting
 eclipse/
 *.pydevproject
 .project
-.metadata
+.metadata/
 bin/
 tmp/
 *.tmp

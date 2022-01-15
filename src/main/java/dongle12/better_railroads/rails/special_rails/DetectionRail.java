@@ -36,11 +36,11 @@ public class DetectionRail extends BlockRailDetector {
 	public DetectionRail(){
 		super();
         //setDefaultState(this.blockState.getBaseState().withProperty(getShapeProperty(), BlockRailBase.EnumRailDirection.NORTH_SOUTH));
-        setUnlocalizedName(BetterRailroads.MODID + "." + "detection_rail");
+        setTranslationKey(BetterRailroads.MODID + "." + "detection_rail");
         setRegistryName(new ResourceLocation(BetterRailroads.MODID, "detection_rail"));
         itemBlock = new ItemBlock(this);
         itemBlock.setRegistryName(new ResourceLocation(BetterRailroads.MODID, "detection_rail"));
-        itemBlock.setUnlocalizedName(BetterRailroads.MODID + "." + "detection_rail");
+        itemBlock.setTranslationKey(BetterRailroads.MODID + "." + "detection_rail");
         setCreativeTab(BetterRailroads.miscRailsTab);
 		setHardness(0.7f);
         setSoundType(SoundType.WOOD);
@@ -98,25 +98,23 @@ public class DetectionRail extends BlockRailDetector {
 		return retSpeed;
 		
 	}
-	
-	
+
 	////////
 	//This is just a test to see about the villages
 	////////
-	@Override
-    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
-    {
-		super.onEntityCollidedWithBlock(worldIn, pos, state, entityIn);
-        if (!worldIn.isRemote)
-        {
-        	VillageCollection villageCollection;
-        	villageCollection = worldIn.getVillageCollection();
-        	if(villageCollection.getNearestVillage(pos, 10) != null){
-        		System.out.println("this was actaully in a village");
-        	}
 
-        }
-    }
+	@Override
+	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+		super.onEntityCollision(worldIn, pos, state, entityIn);
+		if (!worldIn.isRemote)
+		{
+			VillageCollection villageCollection;
+			villageCollection = worldIn.getVillageCollection();
+			if(villageCollection.getNearestVillage(pos, 10) != null){
+				System.out.println("this was actaully in a village");
+			}
+		}
+	}
 	
 	//Gets the item block
     public ItemBlock getItemBlock(){

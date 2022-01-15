@@ -24,7 +24,7 @@ public class ItemChestCart extends ItemMinecart {
 	
 	public ItemChestCart(){
 		super(EntityMinecart.Type.CHEST);
-		setUnlocalizedName(BetterRailroads.MODID + "." + "chest_cart");
+		setTranslationKey(BetterRailroads.MODID + "." + "chest_cart");
 		setRegistryName(new ResourceLocation(BetterRailroads.MODID, "chest_cart"));
 		setCreativeTab(BetterRailroads.miscRailsTab);
 	}

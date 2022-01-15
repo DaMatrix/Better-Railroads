@@ -35,7 +35,7 @@ public class Wrench extends Item {
 	public MinecartEmpty connectingCart;
 	public Wrench(){
 		super();
-		setUnlocalizedName(BetterRailroads.MODID + "." + "wrench");
+		setTranslationKey(BetterRailroads.MODID + "." + "wrench");
 		setRegistryName(new ResourceLocation(BetterRailroads.MODID, "wrench"));
 		setCreativeTab(BetterRailroads.miscRailsTab);
 	}

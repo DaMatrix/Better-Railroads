@@ -24,9 +24,9 @@ public class BetterRailroads {
     
     @Mod.Instance
     public static BetterRailroads instance = new BetterRailroads();
-    public static CreativeTabs miscRailsTab = new CreativeTabs("Better Railroads"){
+    public static CreativeTabs miscRailsTab = new CreativeTabs(MODID){
     	@Override
-    	public ItemStack getTabIconItem(){
+    	public ItemStack createIcon(){
     		return new ItemStack(Item.getItemFromBlock(ModRails.speed_rail));
     	}
     };

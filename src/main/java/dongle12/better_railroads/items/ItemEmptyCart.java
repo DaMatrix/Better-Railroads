@@ -24,7 +24,7 @@ public class ItemEmptyCart extends ItemMinecart {
 	
 	public ItemEmptyCart(){
 		super(EntityMinecart.Type.RIDEABLE);
-		setUnlocalizedName(BetterRailroads.MODID + "." + "empty_cart");
+		setTranslationKey(BetterRailroads.MODID + "." + "empty_cart");
 		setRegistryName(new ResourceLocation(BetterRailroads.MODID, "empty_cart"));
 		setCreativeTab(BetterRailroads.miscRailsTab);
 	}

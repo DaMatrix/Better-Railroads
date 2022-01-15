@@ -23,7 +23,7 @@ public class ItemTrainCart extends ItemMinecart {
 	
 	public ItemTrainCart(){
 		super(EntityMinecart.Type.FURNACE);
-		setUnlocalizedName(BetterRailroads.MODID + "." + "train_cart");
+		setTranslationKey(BetterRailroads.MODID + "." + "train_cart");
 		setRegistryName(new ResourceLocation(BetterRailroads.MODID, "train_cart"));
 		setCreativeTab(BetterRailroads.miscRailsTab);
 	}

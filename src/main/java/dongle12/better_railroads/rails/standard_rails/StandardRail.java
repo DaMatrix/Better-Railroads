@@ -31,11 +31,11 @@ public class StandardRail extends BlockRail {
 	protected StandardRail(boolean isPowered, String name) {
 		super();
         setDefaultState(this.blockState.getBaseState().withProperty(getShapeProperty(), BlockRailBase.EnumRailDirection.NORTH_SOUTH));
-        setUnlocalizedName(BetterRailroads.MODID + "." + name);
+        setTranslationKey(BetterRailroads.MODID + "." + name);
         setRegistryName(new ResourceLocation(BetterRailroads.MODID, name));
         itemBlock = new ItemBlock(this);
         itemBlock.setRegistryName(new ResourceLocation(BetterRailroads.MODID, name));
-        itemBlock.setUnlocalizedName(BetterRailroads.MODID + "." + name);
+        itemBlock.setTranslationKey(BetterRailroads.MODID + "." + name);
         setCreativeTab(BetterRailroads.miscRailsTab);
 		setHardness(0.7f);
         setSoundType(SoundType.WOOD);

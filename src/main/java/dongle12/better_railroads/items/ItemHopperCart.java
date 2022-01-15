@@ -24,7 +24,7 @@ public class ItemHopperCart extends ItemMinecart {
 	
 	public ItemHopperCart(){
 		super(EntityMinecart.Type.HOPPER);
-		setUnlocalizedName(BetterRailroads.MODID + "." + "hopper_cart");
+		setTranslationKey(BetterRailroads.MODID + "." + "hopper_cart");
 		setRegistryName(new ResourceLocation(BetterRailroads.MODID, "hopper_cart"));
 		setCreativeTab(BetterRailroads.miscRailsTab);
 	}

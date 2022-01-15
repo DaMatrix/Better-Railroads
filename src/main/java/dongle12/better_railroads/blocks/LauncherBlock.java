@@ -28,7 +28,7 @@ public class LauncherBlock extends Block {
 	public LauncherBlock() {
 		super(Material.IRON);
 		setRegistryName(new ResourceLocation(BetterRailroads.MODID, "launcher_block"));
-		setUnlocalizedName(BetterRailroads.MODID + "." + "launcher_block");
+		setTranslationKey(BetterRailroads.MODID + "." + "launcher_block");
 		setCreativeTab(BetterRailroads.miscRailsTab);
 	}
 	
@@ -41,12 +41,12 @@ public class LauncherBlock extends Block {
 	public boolean isOpaqueCube(IBlockState state){
 		return false;
 	}
-	
-	@Override
-	public BlockRenderLayer getBlockLayer(){
-		return BlockRenderLayer.TRANSLUCENT;
-	}
-	
+
+    @SideOnly(Side.CLIENT)
+    @Override
+    public BlockRenderLayer getRenderLayer() {
+        return BlockRenderLayer.TRANSLUCENT;
+    }
 	
     @SideOnly(Side.CLIENT)
     public void initModel() {

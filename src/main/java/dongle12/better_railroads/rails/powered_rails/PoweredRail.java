@@ -25,12 +25,12 @@ public class PoweredRail extends BlockRailPowered {
 
 	public PoweredRail(String name){
 		super();
-        setUnlocalizedName(BetterRailroads.MODID + "." + name);
+        setTranslationKey(BetterRailroads.MODID + "." + name);
         setRegistryName(new ResourceLocation(BetterRailroads.MODID, name));
         
         itemBlock = new ItemBlock(this);
         itemBlock.setRegistryName(new ResourceLocation(BetterRailroads.MODID, name));
-        itemBlock.setUnlocalizedName(BetterRailroads.MODID + "." + name);
+        itemBlock.setTranslationKey(BetterRailroads.MODID + "." + name);
         setCreativeTab(BetterRailroads.miscRailsTab);
 		setHardness(0.7f);
         setSoundType(SoundType.WOOD);

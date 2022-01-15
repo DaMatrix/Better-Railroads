@@ -30,7 +30,7 @@ public class ConfigHandler {
 	public static int MAX_JUMP_RAIL_STRENGTH = 10;
 	
 	@Comment("Use Faster cart instead of default cart")
-	public static boolean SPEEDY_CART = true;
+	public static boolean SPEEDY_CART = false;
 
 	@Comment("Enables experimental code which makes very fast minecarts less buggy when going around corners.")
 	public static boolean EXPERIMENTAL_FAST_CART_HANDLING = true;

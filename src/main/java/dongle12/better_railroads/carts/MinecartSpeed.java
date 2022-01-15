@@ -53,8 +53,13 @@ public class MinecartSpeed extends EntityMinecartEmpty {
 
         double origMotionX = this.motionX;
         double origMotionZ = this.motionZ;
+        if (this.isBeingRidden()) {
+            origMotionX *= 0.75d;
+            origMotionZ *= 0.75d;
+        }
+
         double origMotionSq = origMotionX * origMotionX + origMotionZ * origMotionZ;
-        if (!ConfigHandler.EXPERIMENTAL_FAST_CART_HANDLING || origMotionSq <= 1.0d) { //speed is within vanilla limits, keep it
+        if (!ConfigHandler.EXPERIMENTAL_FAST_CART_HANDLING || origMotionSq <= 1.6d * 1.6d) { //speed is within vanilla limits, keep it
             super.moveAlongTrack(pos, state);
             return;
         }
@@ -77,10 +82,9 @@ public class MinecartSpeed extends EntityMinecartEmpty {
             state = this.world.getBlockState(pos);
 
             if (!BlockRailBase.isRailBlock(state)) {
+                totalMotion = totalDistance;
                 break;
             }
-
-            Vec3d lastPos = new Vec3d(this.posX, this.posY, this.posZ);
 
             //normalize vector
             double f = MathHelper.fastInvSqrt(this.motionX * this.motionX + this.motionZ * this.motionZ);
@@ -91,13 +95,16 @@ public class MinecartSpeed extends EntityMinecartEmpty {
             this.motionX *= maxStep;
             this.motionZ *= maxStep;
 
-            //this.motionX = MathHelper.clamp(this.motionX, -maxStep, maxStep);
-            //this.motionZ = MathHelper.clamp(this.motionZ, -maxStep, maxStep);
+            Vec3d lastPos = new Vec3d(this.posX, this.posY, this.posZ);
             super.moveAlongTrack(pos, state);
+            Vec3d nextPos = new Vec3d(this.posX, this.posY, this.posZ);
+
+            distanceCovered += lastPos.distanceTo(nextPos);
+            if (lastPos.equals(nextPos) || (this.motionX == 0.0d && this.motionZ == 0.0d)) {
+                break;
+            }
 
             totalMotion += Math.sqrt(this.motionX * this.motionX + this.motionZ * this.motionZ);
-
-            distanceCovered += new Vec3d(this.posX, this.posY, this.posZ).distanceTo(lastPos);
         } while (distanceCovered < totalDistance);
 
         //normalize vector
@@ -108,5 +115,6 @@ public class MinecartSpeed extends EntityMinecartEmpty {
         //scale to current velocity
         this.motionX *= Math.min(totalMotion, ConfigHandler.MAX_CART_SPEED);
         this.motionZ *= Math.min(totalMotion, ConfigHandler.MAX_CART_SPEED);
+        int i = 0;
     }
 }

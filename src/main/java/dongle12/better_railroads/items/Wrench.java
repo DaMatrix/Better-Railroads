@@ -1,6 +1,7 @@
 package dongle12.better_railroads.items;
 
 import dongle12.better_railroads.BetterRailroads;
+import dongle12.better_railroads.blocks.JumpRailEntity;
 import dongle12.better_railroads.carts.MinecartSpeed;
 import dongle12.better_railroads.rails.powered_rails.JumpRail;
 import net.minecraft.block.Block;
@@ -22,9 +23,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 
 public class Wrench extends Item {
-	
-	public boolean isLinking;
-	public MinecartSpeed connectingCart;
+
 	public Wrench(){
 		super();
 		setTranslationKey(BetterRailroads.MODID + "." + "wrench");
@@ -36,8 +35,6 @@ public class Wrench extends Item {
     public EnumActionResult onItemUseFirst(EntityPlayer player, World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, EnumHand hand)
     {
         IBlockState iblockstate = worldIn.getBlockState(pos);
-        
-
         if (!BlockRailBase.isRailBlock(iblockstate) || hand == EnumHand.OFF_HAND){
             return EnumActionResult.FAIL;
         }
@@ -48,16 +45,15 @@ public class Wrench extends Item {
         		if(worldIn.isRemote){
         			return EnumActionResult.PASS;
         		}
-        		JumpRail jump = (JumpRail) iblockstate.getBlock();
+				JumpRailEntity te = JumpRail.getTE(worldIn, pos);
         		if(player.isSneaking()){
-        			jump.cycleJumpStrength(false, worldIn, pos);
-        			player.sendMessage(new TextComponentTranslation("Current Jump Height: " + jump.getJumpStrength()));
+        			te.decrement();
+        			player.sendMessage(new TextComponentTranslation("Current Jump Height: " + te.getJumpHeight()));
     	        	player.swingArm(hand);
     	            return EnumActionResult.SUCCESS;
-        		}
-        		else{
-        			jump.cycleJumpStrength(true, worldIn, pos);
-        			player.sendMessage(new TextComponentTranslation("Current Jump Height: " + jump.getJumpStrength()));
+        		} else{
+        			te.increment();
+        			player.sendMessage(new TextComponentTranslation("Current Jump Height: " + te.getJumpHeight()));
     	        	player.swingArm(hand);
     	            return EnumActionResult.SUCCESS;
         		}
@@ -68,43 +64,9 @@ public class Wrench extends Item {
 	        	player.swingArm(hand);
 	            return EnumActionResult.SUCCESS;
         	}
-        	else{
-        		
-        	}
         }
         return EnumActionResult.PASS;
     }
-	
-//	@SubscribeEvent
-//	public void attachCart(EntityInteract event){
-//		System.out.println("CLICKED ENTITY");
-//		EntityPlayer player = event.getEntityPlayer();
-//		if(player.getHeldItemMainhand() != null && player.getHeldItemMainhand().getItem() == ModItems.wrench){
-//			Wrench wrench = (Wrench) player.getHeldItemMainhand().getItem();
-//			if(event.getTarget() instanceof SpeedCart){
-//				SpeedCart target = (SpeedCart) event.getTarget();
-//				if(!player.isSneaking()){
-//					if(wrench.isLinking && wrench.connectingCart != target.connectedCart && !target.connected){
-//						target.connectedCart = wrench.connectingCart;
-//						target.connected = true;
-//	        			player.sendMessage(new TextComponentTranslation("Carts Connected"));
-//	        			event.setCanceled(true);
-//					}
-//					else if(!wrench.isLinking){
-//						wrench.connectingCart = target;
-//						event.setCanceled(true);
-//					}
-//				}
-//				else{
-//					target.connectedCart = null;
-//					target.connected = false;
-//					event.setCanceled(true);
-//				}
-//			}
-//		}
-//		event.setCanceled(true);
-//	}
-//	
 	
     @SideOnly(Side.CLIENT)
     public void initModel() {

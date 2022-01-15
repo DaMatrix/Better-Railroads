@@ -86,11 +86,6 @@ public class IntersectionRail extends StandardRail {
 		}
 		return state.getValue(getShapeProperty());
 	}
-
-	//Gets the item block
-    public ItemBlock getItemBlock(){
-        return itemBlock;
-    }
     
     @Override
     public boolean canMakeSlopes(IBlockAccess world, BlockPos pos)

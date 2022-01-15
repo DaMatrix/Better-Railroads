@@ -64,9 +64,4 @@ public class SpeedRail extends StandardRail {
 		}
 		return retSpeed;
 	}
-
-	//Gets the item block
-    public ItemBlock getItemBlock(){
-        return itemBlock;
-    }
 }

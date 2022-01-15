@@ -32,12 +32,6 @@ public class PoweredRail extends BlockRailPowered {
 		setHardness(0.7f);
         setSoundType(SoundType.WOOD);
 	}
-	
-    @Override
-    public Material getMaterial(IBlockState state)
-    {
-        return Material.WOOD;
-    }
     
     
 	private static final AxisAlignedBB FLAT_BOUNDING = new AxisAlignedBB(0f, 0f, 0f, 1.0f, .45f, 1.0f);
@@ -64,40 +58,7 @@ public class PoweredRail extends BlockRailPowered {
     {
         if (!worldIn.isRemote)
         {
-            BlockRailBase.EnumRailDirection blockrailbase$enumraildirection = getRailDirection(worldIn, pos, worldIn.getBlockState(pos), null);
-            boolean flag = false;
-
-           // if (!worldIn.getBlockState(pos.down()).isSideSolid(worldIn, pos.down(), EnumFacing.UP))
-           // {
-           //     flag = true;
-           // }
-
-            if (blockrailbase$enumraildirection == BlockRailBase.EnumRailDirection.ASCENDING_EAST && !worldIn.getBlockState(pos.east()).isSideSolid(worldIn, pos.east(), EnumFacing.UP))
-            {
-                flag = true;
-            }
-            else if (blockrailbase$enumraildirection == BlockRailBase.EnumRailDirection.ASCENDING_WEST && !worldIn.getBlockState(pos.west()).isSideSolid(worldIn, pos.west(), EnumFacing.UP))
-            {
-                flag = true;
-            }
-            else if (blockrailbase$enumraildirection == BlockRailBase.EnumRailDirection.ASCENDING_NORTH && !worldIn.getBlockState(pos.north()).isSideSolid(worldIn, pos.north(), EnumFacing.UP))
-            {
-                flag = true;
-            }
-            else if (blockrailbase$enumraildirection == BlockRailBase.EnumRailDirection.ASCENDING_SOUTH && !worldIn.getBlockState(pos.south()).isSideSolid(worldIn, pos.south(), EnumFacing.UP))
-            {
-                flag = true;
-            }
-
-           // if (flag && !worldIn.isAirBlock(pos))
-           // {
-            //    this.dropBlockAsItem(worldIn, pos, state, 0);
-           //     worldIn.setBlockToAir(pos);
-           // }
-            else
-            {
-                this.updateState(state, worldIn, pos, blockIn);
-            }
+            this.updateState(state, worldIn, pos, blockIn);
         }
     }
 	

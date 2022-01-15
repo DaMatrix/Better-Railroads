@@ -22,10 +22,11 @@ public class LauncherBlock extends Block {
     private static final AxisAlignedBB AABB_LAUNCHER_BOUNDS = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.75D, 1.0D);
 
 	public LauncherBlock() {
-		super(Material.IRON);
+		super(Material.WOOD);
 		setRegistryName(new ResourceLocation(BetterRailroads.MODID, "launcher_block"));
 		setTranslationKey(BetterRailroads.MODID + "." + "launcher_block");
 		setCreativeTab(BetterRailroads.miscRailsTab);
+        setHardness(0.7f);
 	}
 	
 	@Override

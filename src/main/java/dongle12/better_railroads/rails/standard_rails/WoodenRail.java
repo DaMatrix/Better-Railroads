@@ -66,9 +66,4 @@ public class WoodenRail extends StandardRail {
 		return retSpeed;
 		
 	}
-		
-	//Gets the item block
-    public ItemBlock getItemBlock(){
-        return itemBlock;
-    }    
 }

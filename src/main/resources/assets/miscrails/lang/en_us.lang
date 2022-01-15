@@ -1,6 +1,6 @@
 tile.miscrails.speed_rail.name=Iron Rail
 tile.miscrails.powered_speed_rail.name=Powered Iron Rail
-tile.miscrails.brake_rail.name=Holding Rail
+tile.miscrails.holding_rail.name=Holding Rail
 tile.miscrails.deceleration_rail.name=Deceleration Rail
 tile.miscrails.launcher_block.name=Rail End
 tile.miscrails.wooden_rail.name=Wooden Rail
@@ -11,7 +11,7 @@ tile.miscrails.jump_rail.name=Jump Rail
 
 item.miscrails.wrench.name=Railroad Wrench
 
-item.miscrails.empty_cart.name=Empty Cart
+item.miscrails.speed_cart.name=Empty Cart
 item.miscrails.train_cart.name=Train Cart
 item.miscrails.hopper_cart.name=Hopper Cart
 item.miscrails.chest_cart.name=Chest Cart

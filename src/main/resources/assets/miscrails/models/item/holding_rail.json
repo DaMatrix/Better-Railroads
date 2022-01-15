@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "miscrails:brake_rail"
+        "layer0": "miscrails:holding_rail"
     }
 }

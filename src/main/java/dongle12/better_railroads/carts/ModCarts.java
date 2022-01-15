@@ -14,7 +14,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModCarts {
 	
 	public static void init(){
-    	EntityRegistry.registerModEntity(new ResourceLocation(BetterRailroads.MODID, "empty_cart"), MinecartEmpty.class, "empty_cart", 0, BetterRailroads.instance, 64, 1, false);
+    	EntityRegistry.registerModEntity(new ResourceLocation(BetterRailroads.MODID, "speed_cart"), MinecartEmpty.class, "speed_cart", 0, BetterRailroads.instance, 64, 1, false);
     	EntityRegistry.registerModEntity(new ResourceLocation(BetterRailroads.MODID, "train_cart"), TrainCart.class, "train_cart", 1, BetterRailroads.instance, 64, 1, false);
     	EntityRegistry.registerModEntity(new ResourceLocation(BetterRailroads.MODID, "hopper_cart"), MinecartHopper.class, "hopper_cart", 2, BetterRailroads.instance, 64, 1, false);
     	EntityRegistry.registerModEntity(new ResourceLocation(BetterRailroads.MODID, "chest_cart"), MinecartChest.class, "chest_cart", 3, BetterRailroads.instance, 64, 1, false);

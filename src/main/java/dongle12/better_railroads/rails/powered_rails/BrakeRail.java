@@ -34,7 +34,7 @@ public class BrakeRail extends PoweredRail {
 	double cartX;
 	double cartZ;
 	public BrakeRail(){
-		super("brake_rail");
+		super("holding_rail");
 	}
 	
 	@Override

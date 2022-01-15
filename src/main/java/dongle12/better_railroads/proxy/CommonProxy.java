@@ -67,7 +67,7 @@ public class CommonProxy {
     public static void OnRegisterItems(RegistryEvent.Register<Item> e){
     	e.getRegistry().register(new ItemBlock(ModRails.speed_rail).setRegistryName(ModRails.speed_rail.getRegistryName()));
     	e.getRegistry().register(new ItemBlock(ModRails.powered_speed_rail).setRegistryName(ModRails.powered_speed_rail.getRegistryName()));
-    	e.getRegistry().register(new ItemBlock(ModRails.brake_rail).setRegistryName(ModRails.brake_rail.getRegistryName()));
+    	e.getRegistry().register(new ItemBlock(ModRails.holding_rail).setRegistryName(ModRails.holding_rail.getRegistryName()));
     	e.getRegistry().register(new ItemBlock(ModRails.deceleration_rail).setRegistryName(ModRails.deceleration_rail.getRegistryName()));
     	e.getRegistry().register(new ItemBlock(ModRails.wooden_rail).setRegistryName(ModRails.wooden_rail.getRegistryName()));
     	e.getRegistry().register(new ItemBlock(ModBlocks.launcher_block).setRegistryName(ModBlocks.launcher_block.getRegistryName()));

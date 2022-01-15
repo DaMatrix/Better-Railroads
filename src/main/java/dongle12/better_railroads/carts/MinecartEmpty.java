@@ -51,7 +51,7 @@ public class MinecartEmpty extends EntityMinecartEmpty{
 
         if (this.world.getGameRules().getBoolean("doEntityDrops"))
         {
-            ItemStack itemstack = new ItemStack(ModItems.empty_cart, 1);
+            ItemStack itemstack = new ItemStack(ModItems.speed_cart, 1);
 
             if (this.hasCustomName())
             {

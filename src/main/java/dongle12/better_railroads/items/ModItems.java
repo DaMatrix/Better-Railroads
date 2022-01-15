@@ -8,8 +8,8 @@ import static dongle12.better_railroads.BetterRailroads.*;
 
 public class ModItems {
 	
-	@GameRegistry.ObjectHolder(MODID + ":empty_cart")
-	public static ItemEmptyCart empty_cart;
+	@GameRegistry.ObjectHolder(MODID + ":speed_cart")
+	public static ItemEmptyCart speed_cart;
 	
 	@GameRegistry.ObjectHolder(MODID + ":wrench")
 	public static Wrench wrench;
@@ -25,7 +25,7 @@ public class ModItems {
 	
     @SideOnly(Side.CLIENT)
     public static void initModels() {
-    	empty_cart.initModel();
+    	speed_cart.initModel();
     	train_cart.initModel();
     	hopper_cart.initModel();
     	chest_cart.initModel();

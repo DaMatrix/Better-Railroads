@@ -3,8 +3,15 @@ package dongle12.better_railroads.util;
 import dongle12.better_railroads.BetterRailroads;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.Config.Comment;
+import net.minecraftforge.common.config.ConfigManager;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Config(modid = BetterRailroads.MODID)
+import static dongle12.better_railroads.BetterRailroads.*;
+
+@Config(modid = MODID)
+@Mod.EventBusSubscriber
 public class ConfigHandler {
 
 	@Comment("Speed multiplier of speed rail. Default 3; Default for a vanilla rail is .4")
@@ -27,4 +34,11 @@ public class ConfigHandler {
 
 	@Comment("Enables experimental code which makes very fast minecarts less buggy when going around corners.")
 	public static boolean EXPERIMENTAL_FAST_CART_HANDLING = true;
+
+	@SubscribeEvent
+	public static void configChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
+		if (MODID.equals(event.getModID())) {
+			ConfigManager.sync(MODID, Config.Type.INSTANCE);
+		}
+	}
 }

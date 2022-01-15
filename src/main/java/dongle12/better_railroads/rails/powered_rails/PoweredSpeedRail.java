@@ -50,7 +50,7 @@ public class PoweredSpeedRail extends PoweredRail {
 
 				//If the direction is not null, and the rail is ascending, start to slow
 				if((dir != null && dir.isAscending()) || (dirNext != null && dirNext.isAscending())){
-					//no-op
+					retSpeed = 0.6f;
 				}
 				else {
 					retSpeed *= ConfigHandler.POWERED_SPEED_RAIL_MULTIPLIER;

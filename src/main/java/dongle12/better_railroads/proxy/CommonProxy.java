@@ -1,6 +1,7 @@
 package dongle12.better_railroads.proxy;
 
 import dongle12.better_railroads.BetterRailroads;
+import dongle12.better_railroads.blocks.BrakeRailEntity;
 import dongle12.better_railroads.blocks.JumpRailEntity;
 import dongle12.better_railroads.blocks.LauncherBlock;
 import dongle12.better_railroads.blocks.ModBlocks;
@@ -56,6 +57,7 @@ public class CommonProxy {
     	e.getRegistry().register(new IntersectionRail());
     	e.getRegistry().register(new DetectionRail());
     	e.getRegistry().register(new JumpRail());
+    	GameRegistry.registerTileEntity(BrakeRailEntity.class, BetterRailroads.MODID + "_brakerailte");
     	GameRegistry.registerTileEntity(JumpRailEntity.class, BetterRailroads.MODID + "_jumprailte");
     	e.getRegistry().register(new LauncherBlock());
     }
@@ -64,7 +66,7 @@ public class CommonProxy {
     public static void OnRegisterItems(RegistryEvent.Register<Item> e){
     	e.getRegistry().register(new ItemBlock(ModRails.speed_rail).setRegistryName(ModRails.speed_rail.getRegistryName()));
     	e.getRegistry().register(new ItemBlock(ModRails.powered_speed_rail).setRegistryName(ModRails.powered_speed_rail.getRegistryName()));
-    	e.getRegistry().register(new ItemBlock(ModRails.holding_rail).setRegistryName(ModRails.holding_rail.getRegistryName()));
+    	e.getRegistry().register(new ItemBlock(ModRails.brake_rail).setRegistryName(ModRails.brake_rail.getRegistryName()));
     	e.getRegistry().register(new ItemBlock(ModRails.deceleration_rail).setRegistryName(ModRails.deceleration_rail.getRegistryName()));
     	e.getRegistry().register(new ItemBlock(ModRails.wooden_rail).setRegistryName(ModRails.wooden_rail.getRegistryName()));
     	e.getRegistry().register(new ItemBlock(ModBlocks.launcher_block).setRegistryName(ModBlocks.launcher_block.getRegistryName()));

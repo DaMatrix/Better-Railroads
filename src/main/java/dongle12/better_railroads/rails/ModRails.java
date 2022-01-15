@@ -23,8 +23,8 @@ public class ModRails {
 	@GameRegistry.ObjectHolder(MODID + ":powered_speed_rail")
 	public static PoweredSpeedRail powered_speed_rail;
 	
-	@GameRegistry.ObjectHolder(MODID + ":holding_rail")
-	public static BrakeRail holding_rail;
+	@GameRegistry.ObjectHolder(MODID + ":brake_rail")
+	public static BrakeRail brake_rail;
 	
 	@GameRegistry.ObjectHolder(MODID + ":deceleration_rail")
 	public static DecelerationRail deceleration_rail;
@@ -48,7 +48,7 @@ public class ModRails {
     public static void initModels() {
     	speed_rail.initModel();
         powered_speed_rail.initModel();
-        holding_rail.initModel();
+        brake_rail.initModel();
         deceleration_rail.initModel();
         wooden_rail.initModel();
         launching_rail.initModel();

@@ -1,6 +1,6 @@
 {
     "parent": "block/rail_raised_ne",
     "textures": {
-        "rail": "miscrails:holding_rail"
+        "rail": "miscrails:brake_rail"
     }
 }

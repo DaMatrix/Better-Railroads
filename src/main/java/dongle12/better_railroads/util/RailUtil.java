@@ -3,7 +3,7 @@ package dongle12.better_railroads.util;
 import java.util.List;
 
 import dongle12.better_railroads.blocks.LauncherBlock;
-import dongle12.better_railroads.carts.MinecartEmpty;
+import dongle12.better_railroads.carts.MinecartSpeed;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRailBase;
 import net.minecraft.block.state.IBlockState;
@@ -59,12 +59,12 @@ public class RailUtil {
 		}
 	}
 	
-	public static MinecartEmpty isSpeedCart(World worldIn, float x, float y, float z){
+	public static MinecartSpeed isSpeedCart(World worldIn, float x, float y, float z){
 		AxisAlignedBB aabb = new AxisAlignedBB(x,y,z, x, y+1, z);
-		List list = worldIn.getEntitiesWithinAABB(MinecartEmpty.class, aabb);
-		MinecartEmpty sCart = null;
+		List list = worldIn.getEntitiesWithinAABB(MinecartSpeed.class, aabb);
+		MinecartSpeed sCart = null;
 		if(list.size() > 0){
-			sCart = (MinecartEmpty) list.get(0);
+			sCart = (MinecartSpeed) list.get(0);
 			return sCart;
 		}
 		else{

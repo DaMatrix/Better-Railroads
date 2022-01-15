@@ -1,8 +1,7 @@
 package dongle12.better_railroads.items;
 
 import dongle12.better_railroads.BetterRailroads;
-import dongle12.better_railroads.carts.MinecartHopper;
-import dongle12.better_railroads.carts.TrainCart;
+import dongle12.better_railroads.carts.MinecartSpeed;
 import net.minecraft.block.BlockRailBase;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -20,12 +19,12 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemHopperCart extends ItemMinecart {
+public class ItemSpeedCart extends ItemMinecart {
 	
-	public ItemHopperCart(){
-		super(EntityMinecart.Type.HOPPER);
-		setTranslationKey(BetterRailroads.MODID + "." + "hopper_cart");
-		setRegistryName(new ResourceLocation(BetterRailroads.MODID, "hopper_cart"));
+	public ItemSpeedCart(){
+		super(EntityMinecart.Type.RIDEABLE);
+		setTranslationKey(BetterRailroads.MODID + "." + "speed_cart");
+		setRegistryName(new ResourceLocation(BetterRailroads.MODID, "speed_cart"));
 		setCreativeTab(BetterRailroads.miscRailsTab);
 	}
 	 
@@ -52,7 +51,7 @@ public class ItemHopperCart extends ItemMinecart {
                     d0 = 0.5D;
                 }
 
-                MinecartHopper entityminecart = new MinecartHopper(worldIn, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.0625D + d0, (double)pos.getZ() + 0.5);
+                MinecartSpeed entityminecart = new MinecartSpeed(worldIn, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.0625D + d0, (double)pos.getZ() + 0.5);
 
                 if (itemstack.hasDisplayName())
                 {

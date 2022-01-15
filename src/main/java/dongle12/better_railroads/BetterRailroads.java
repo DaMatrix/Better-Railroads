@@ -1,7 +1,6 @@
 package dongle12.better_railroads;
 
 import dongle12.better_railroads.events.CartSpawnEvent;
-import dongle12.better_railroads.events.LinkEvent;
 import dongle12.better_railroads.proxy.CommonProxy;
 import dongle12.better_railroads.rails.ModRails;
 import net.minecraft.creativetab.CreativeTabs;
@@ -43,7 +42,6 @@ public class BetterRailroads {
     @EventHandler
     public void postInit(FMLPostInitializationEvent event){
     	MinecraftForge.EVENT_BUS.register(new CartSpawnEvent());
-    	MinecraftForge.EVENT_BUS.register(new LinkEvent());
         proxy.postInit(event);
     }
 }

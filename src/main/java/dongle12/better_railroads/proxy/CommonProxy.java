@@ -5,10 +5,7 @@ import dongle12.better_railroads.blocks.JumpRailEntity;
 import dongle12.better_railroads.blocks.LauncherBlock;
 import dongle12.better_railroads.blocks.ModBlocks;
 import dongle12.better_railroads.carts.ModCarts;
-import dongle12.better_railroads.items.ItemChestCart;
-import dongle12.better_railroads.items.ItemEmptyCart;
-import dongle12.better_railroads.items.ItemHopperCart;
-import dongle12.better_railroads.items.ItemTrainCart;
+import dongle12.better_railroads.items.ItemSpeedCart;
 import dongle12.better_railroads.items.Wrench;
 import dongle12.better_railroads.rails.ModRails;
 import dongle12.better_railroads.rails.powered_rails.BrakeRail;
@@ -76,11 +73,7 @@ public class CommonProxy {
     	e.getRegistry().register(new ItemBlock(ModRails.detection_rail).setRegistryName(ModRails.detection_rail.getRegistryName()));
     	e.getRegistry().register(new ItemBlock(ModRails.jump_rail).setRegistryName(ModRails.jump_rail.getRegistryName()));
     	
-    	e.getRegistry().register(new ItemEmptyCart());
-    	e.getRegistry().register(new ItemTrainCart());
-    	e.getRegistry().register(new ItemHopperCart());
-    	e.getRegistry().register(new ItemChestCart());
-
+    	e.getRegistry().register(new ItemSpeedCart());
 
     	e.getRegistry().register(new Wrench());
     }

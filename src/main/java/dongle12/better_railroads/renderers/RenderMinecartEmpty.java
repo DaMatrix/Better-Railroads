@@ -1,7 +1,7 @@
 package dongle12.better_railroads.renderers;
 
 import dongle12.better_railroads.BetterRailroads;
-import dongle12.better_railroads.carts.MinecartEmpty;
+import dongle12.better_railroads.carts.MinecartSpeed;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
@@ -10,12 +10,8 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.entity.RenderMinecart;
-import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 
 public class RenderMinecartEmpty<T extends EntityMinecart> extends RenderMinecart<T> {
@@ -30,10 +26,10 @@ public class RenderMinecartEmpty<T extends EntityMinecart> extends RenderMinecar
 
 	public static final FactoryEmpty FACTORY_EMPTY = new FactoryEmpty();
 	
-	public static class FactoryEmpty implements IRenderFactory<MinecartEmpty> {
+	public static class FactoryEmpty implements IRenderFactory<MinecartSpeed> {
 			@Override
-			public Render<? super MinecartEmpty> createRenderFor(RenderManager rm) {
-		      return new RenderMinecartEmpty<MinecartEmpty>(rm, new ResourceLocation(BetterRailroads.MODID, "textures/speed_cart.png"));
+			public Render<? super MinecartSpeed> createRenderFor(RenderManager rm) {
+		      return new RenderMinecartEmpty<MinecartSpeed>(rm, new ResourceLocation(BetterRailroads.MODID, "textures/speed_cart.png"));
 	   }
 	}
 	

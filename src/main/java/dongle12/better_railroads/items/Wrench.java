@@ -1,19 +1,14 @@
 package dongle12.better_railroads.items;
 
 import dongle12.better_railroads.BetterRailroads;
-import dongle12.better_railroads.carts.MinecartEmpty;
+import dongle12.better_railroads.carts.MinecartSpeed;
 import dongle12.better_railroads.rails.powered_rails.JumpRail;
-import dongle12.better_railroads.util.RailUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRailBase;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.item.EntityMinecartEmpty;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.server.management.PlayerList;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -22,9 +17,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent.EntityInteract;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -32,7 +24,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class Wrench extends Item {
 	
 	public boolean isLinking;
-	public MinecartEmpty connectingCart;
+	public MinecartSpeed connectingCart;
 	public Wrench(){
 		super();
 		setTranslationKey(BetterRailroads.MODID + "." + "wrench");

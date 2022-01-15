@@ -24,4 +24,7 @@ public class ConfigHandler {
 	
 	@Comment("Use Faster cart instead of default cart")
 	public static boolean SPEEDY_CART = true;
+
+	@Comment("Enables experimental code which makes very fast minecarts less buggy when going around corners.")
+	public static boolean EXPERIMENTAL_FAST_CART_HANDLING = true;
 }

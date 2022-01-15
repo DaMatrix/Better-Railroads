@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "shape=north_south": { "model": "better_railroads:intersection_rail/intersection_rail_flat" },
-        "shape=east_west": { "model": "better_railroads:intersection_rail/intersection_rail_flat", "y": 90 }
-    }
-}

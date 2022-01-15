@@ -2,10 +2,9 @@ package dongle12.better_railroads.util;
 
 import dongle12.better_railroads.BetterRailroads;
 import net.minecraftforge.common.config.Config;
-import net.minecraftforge.common.config.Config.Name;
 import net.minecraftforge.common.config.Config.Comment;
 
-@Config(modid = BetterRailroads.MODID, name = BetterRailroads.NAME)
+@Config(modid = BetterRailroads.MODID)
 public class ConfigHandler {
 
 	@Comment("Speed multiplier of speed rail. Default 3; Default for a vanilla rail is .4")
@@ -15,7 +14,7 @@ public class ConfigHandler {
 	public static float POWERED_SPEED_RAIL_MULTIPLIER = 4;
 	
 	@Comment("The max speed of the speed cart. Default for vanilla is 1.2")
-	public static float MAX_CART_SPEED = 3;
+	public static float MAX_CART_SPEED = 4;
 	
 	@Comment("The speed multiplier of a wooden rail. Default: 1; Default for a vanilla rail is .4")
 	public static float WOODEN_RAIL_MULTIPLIER = 1;

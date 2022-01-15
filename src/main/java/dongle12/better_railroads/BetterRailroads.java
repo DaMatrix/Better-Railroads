@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = BetterRailroads.MODID, useMetadata = true)
 public class BetterRailroads {
     public static final String MODID = "miscrails";
-    
+
     @Mod.Instance
     public static BetterRailroads instance = new BetterRailroads();
     public static CreativeTabs miscRailsTab = new CreativeTabs(MODID){

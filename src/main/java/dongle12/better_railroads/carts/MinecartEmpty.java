@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class MinecartEmpty extends EntityMinecartEmpty{
+public class MinecartEmpty extends EntityMinecartEmpty {
 	
 	public boolean connected = false;
 	public MinecartEmpty connectedCart;

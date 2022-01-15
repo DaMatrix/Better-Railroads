@@ -1,7 +1,5 @@
 package dongle12.better_railroads.rails.powered_rails;
 
-import java.lang.reflect.Field;
-
 import dongle12.better_railroads.BetterRailroads;
 import dongle12.better_railroads.util.RailUtil;
 import net.minecraft.block.Block;
@@ -17,7 +15,6 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.ReflectionHelper;
 
 public class PoweredRail extends BlockRailPowered {
 	
@@ -49,9 +46,9 @@ public class PoweredRail extends BlockRailPowered {
 	//USED FOR FLOATING
 	@Override
 	public boolean canPlaceBlockAt(World world, BlockPos pos){
-		boolean railFound = RailUtil.FoundRail(world, pos.east()) || RailUtil.FoundRail(world, pos.west()) || RailUtil.FoundRail(world, pos.north()) || RailUtil.FoundRail(world, pos.south());
+		boolean railFound = RailUtil.isRail(world, pos.east()) || RailUtil.isRail(world, pos.west()) || RailUtil.isRail(world, pos.north()) || RailUtil.isRail(world, pos.south());
 		boolean blockFound = RailUtil.IsBlock(world, pos.east()) || RailUtil.IsBlock(world, pos.west()) || RailUtil.IsBlock(world, pos.north()) || RailUtil.IsBlock(world, pos.south());
-		if(RailUtil.FoundRail(world, pos.down())){
+		if(RailUtil.isRail(world, pos.down())){
 			return false;
 		}
 		else if(blockFound || railFound){

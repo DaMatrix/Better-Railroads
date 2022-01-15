@@ -1,7 +1,5 @@
 package dongle12.better_railroads.rails.special_rails;
 
-import java.lang.reflect.Field;
-
 import dongle12.better_railroads.BetterRailroads;
 import dongle12.better_railroads.util.ConfigHandler;
 import dongle12.better_railroads.util.RailUtil;
@@ -24,7 +22,6 @@ import net.minecraft.village.VillageCollection;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.relauncher.ReflectionHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -69,14 +66,14 @@ public class DetectionRail extends BlockRailDetector {
 			//Look at the next block
 			BlockPos nextPos = pos.offset(side);
 			//Boolean to see if a rail has been found
-			boolean foundRail = RailUtil.FoundRail(world, nextPos);
+			boolean foundRail = RailUtil.isRail(world, nextPos);
 			//If no rail is found, check the next block up or down to find a rail
 			if(!foundRail){
-				if(RailUtil.FoundRail(world, nextPos.down())){
+				if(RailUtil.isRail(world, nextPos.down())){
 					foundRail = true;
 					nextPos = nextPos.up();
 				}
-				else if(RailUtil.FoundRail(world,nextPos.down())){
+				else if(RailUtil.isRail(world,nextPos.down())){
 					foundRail = true;
 					nextPos = nextPos.down();
 				}
@@ -130,9 +127,9 @@ public class DetectionRail extends BlockRailDetector {
     
 	@Override
 	public boolean canPlaceBlockAt(World world, BlockPos pos){
-		boolean railFound = RailUtil.FoundRail(world, pos.east()) || RailUtil.FoundRail(world, pos.west()) || RailUtil.FoundRail(world, pos.north()) || RailUtil.FoundRail(world, pos.south());
+		boolean railFound = RailUtil.isRail(world, pos.east()) || RailUtil.isRail(world, pos.west()) || RailUtil.isRail(world, pos.north()) || RailUtil.isRail(world, pos.south());
 		boolean blockFound = RailUtil.IsBlock(world, pos.east()) || RailUtil.IsBlock(world, pos.west()) || RailUtil.IsBlock(world, pos.north()) || RailUtil.IsBlock(world, pos.south());
-		if(RailUtil.FoundRail(world, pos.down())){
+		if(RailUtil.isRail(world, pos.down())){
 			return false;
 		}
 		else if(blockFound || railFound){

@@ -1,18 +1,13 @@
 package dongle12.better_railroads.rails.standard_rails;
 
-import java.lang.reflect.Field;
-
 import dongle12.better_railroads.BetterRailroads;
 import dongle12.better_railroads.util.RailUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRail;
 import net.minecraft.block.BlockRailBase;
-import net.minecraft.block.BlockRailBase.EnumRailDirection;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.EnumFacing;
@@ -21,7 +16,6 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.ReflectionHelper;
 
 public class StandardRail extends BlockRail {
 
@@ -54,9 +48,9 @@ public class StandardRail extends BlockRail {
     
 	@Override
 	public boolean canPlaceBlockAt(World world, BlockPos pos){
-		boolean railFound = RailUtil.FoundRail(world, pos.east()) || RailUtil.FoundRail(world, pos.west()) || RailUtil.FoundRail(world, pos.north()) || RailUtil.FoundRail(world, pos.south());
+		boolean railFound = RailUtil.isRail(world, pos.east()) || RailUtil.isRail(world, pos.west()) || RailUtil.isRail(world, pos.north()) || RailUtil.isRail(world, pos.south());
 		boolean blockFound = RailUtil.IsBlock(world, pos.east()) || RailUtil.IsBlock(world, pos.west()) || RailUtil.IsBlock(world, pos.north()) || RailUtil.IsBlock(world, pos.south());
-		if(RailUtil.FoundRail(world, pos.down())){
+		if(RailUtil.isRail(world, pos.down())){
 			return false;
 		}
 		else if(blockFound || railFound){

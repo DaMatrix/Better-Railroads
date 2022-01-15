@@ -10,7 +10,6 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
@@ -46,14 +45,14 @@ public class JumpRail extends PoweredRail  implements ITileEntityProvider{
 			//Look at the next block
 			BlockPos nextPos = pos.offset(side);
 			//Boolean to see if a rail has been found
-			boolean foundRail = RailUtil.FoundRail(world, nextPos);
+			boolean foundRail = RailUtil.isRail(world, nextPos);
 			//If no rail is found, check the next block up or down to find a rail
 			if(!foundRail){
-				if(RailUtil.FoundRail(world, nextPos.down())){
+				if(RailUtil.isRail(world, nextPos.down())){
 					foundRail = true;
 					nextPos = nextPos.up();
 				}
-				else if(RailUtil.FoundRail(world,nextPos.down())){
+				else if(RailUtil.isRail(world,nextPos.down())){
 					foundRail = true;
 					nextPos = nextPos.down();
 				}

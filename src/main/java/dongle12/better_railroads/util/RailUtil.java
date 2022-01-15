@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 public class RailUtil {
 	
 	//Check For Rails
-	public static boolean FoundRail(World world, BlockPos pos){
+	public static boolean isRail(World world, BlockPos pos){
 		Block found = world.getBlockState(pos).getBlock();
 		if(found instanceof BlockRailBase){
 			return true;
@@ -27,6 +27,7 @@ public class RailUtil {
 	}
 	
 	public static boolean IsBlock(World world, BlockPos pos){
+		//DaPorkchop_: wtf is this?
 		Block found = world.getBlockState(pos).getBlock();
 		if(found instanceof Block){
 			return true;
@@ -81,14 +82,14 @@ public class RailUtil {
 			//Look at the next block
 			BlockPos nextPos = pos.offset(side);
 			//Boolean to see if a rail has been found
-			boolean foundRail = RailUtil.FoundRail(world, nextPos);
+			boolean foundRail = RailUtil.isRail(world, nextPos);
 			//If no rail is found, check the next block up or down to find a rail
 			if(!foundRail){
-				if(RailUtil.FoundRail(world, nextPos.down())){
+				if(RailUtil.isRail(world, nextPos.down())){
 					foundRail = true;
 					nextPos = nextPos.up();
 				}
-				else if(RailUtil.FoundRail(world,nextPos.down())){
+				else if(RailUtil.isRail(world,nextPos.down())){
 					foundRail = true;
 					nextPos = nextPos.down();
 				}

@@ -55,7 +55,9 @@ public class SpeedRail extends StandardRail {
 				BlockRailBase.EnumRailDirection dirNext = RailUtil.RailDirection(world, cart, nextPos);
 
 				//If the direction is not null, and the rail is ascending, start to slow
-				if((dir != null && dir.isAscending()) || (dirNext != null && dirNext.isAscending())){
+				if((dir != null && dir.isAscending()) || (dirNext != null && dirNext.isAscending())) {
+					//no-op
+				} else if (dir.ordinal() >= EnumRailDirection.SOUTH_EAST.ordinal()) { //go slow on turns to prevent getting kicked off the edge
 					//no-op
 				} else{
 					retSpeed *= ConfigHandler.SPEED_RAIL_MULTIPLIER;

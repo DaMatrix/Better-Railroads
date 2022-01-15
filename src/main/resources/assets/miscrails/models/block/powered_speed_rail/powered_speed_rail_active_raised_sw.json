@@ -1,0 +1,6 @@
+{
+    "parent": "block/rail_raised_sw",
+    "textures": {
+        "rail": "miscrails:powered_speed_rail_powered"
+    }
+}

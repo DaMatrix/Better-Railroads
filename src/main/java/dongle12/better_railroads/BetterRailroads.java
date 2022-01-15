@@ -15,12 +15,9 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = BetterRailroads.MODID, name = BetterRailroads.NAME, version = BetterRailroads.VERSION)
+@Mod(modid = BetterRailroads.MODID, useMetadata = true)
 public class BetterRailroads {
-
-    public static final String MODID = "better_railroads";
-    public static final String NAME = "Better Railroads";
-    public static final String VERSION = "1.0.0";
+    public static final String MODID = "miscrails";
     
     @Mod.Instance
     public static BetterRailroads instance = new BetterRailroads();

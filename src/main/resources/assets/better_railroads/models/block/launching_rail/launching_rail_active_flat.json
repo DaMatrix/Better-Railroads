@@ -1,6 +1,0 @@
-{
-    "parent": "block/rail_flat",
-    "textures": {
-        "rail": "better_railroads:launching_rail_powered"
-    }
-}

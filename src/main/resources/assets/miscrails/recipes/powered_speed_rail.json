@@ -1,0 +1,38 @@
+{ 
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ACA",
+    "BDB",
+    "ACA"  ],
+  "key": {
+    "A": [
+      {
+        "item": "minecraft:iron_ingot",
+        "data": 0
+      }
+    ],
+    "B": [
+      {
+        "item": "minecraft:gold_ingot",
+        "data": 0
+      }
+    ],
+    "C": [
+      {
+        "item": "minecraft:redstone_torch",
+        "data": 0
+      }
+    ],
+    "D": [
+      {
+        "item": "minecraft:stick",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "miscrails:powered_speed_rail",
+    "data": 0,
+	"count": 32
+  }
+}

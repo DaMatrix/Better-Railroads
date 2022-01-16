@@ -35,6 +35,10 @@ public class ConfigHandler {
 	@Comment("Enables experimental code which makes very fast minecarts less buggy when going around corners.")
 	public static boolean EXPERIMENTAL_FAST_CART_HANDLING = true;
 
+	@Comment("The maximum stack size for Speed Carts.")
+	@Config.RangeInt(min = 1, max = 64)
+	public static int MAX_CART_STACK_SIZE = 16;
+
 	@SubscribeEvent
 	public static void configChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
 		if (MODID.equals(event.getModID())) {

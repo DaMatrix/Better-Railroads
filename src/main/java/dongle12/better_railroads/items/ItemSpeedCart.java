@@ -2,6 +2,7 @@ package dongle12.better_railroads.items;
 
 import dongle12.better_railroads.BetterRailroads;
 import dongle12.better_railroads.carts.MinecartSpeed;
+import dongle12.better_railroads.util.ConfigHandler;
 import net.minecraft.block.BlockRailBase;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -20,15 +21,16 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemSpeedCart extends ItemMinecart {
-	
+
 	public ItemSpeedCart(){
 		super(EntityMinecart.Type.RIDEABLE);
 		setTranslationKey(BetterRailroads.MODID + "." + "speed_cart");
 		setRegistryName(new ResourceLocation(BetterRailroads.MODID, "speed_cart"));
 		setCreativeTab(BetterRailroads.miscRailsTab);
+		this.setMaxStackSize(ConfigHandler.MAX_CART_STACK_SIZE);
 	}
-	 
-	@Override 
+
+	@Override
     public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
         IBlockState iblockstate = worldIn.getBlockState(pos);
@@ -65,7 +67,7 @@ public class ItemSpeedCart extends ItemMinecart {
             return EnumActionResult.SUCCESS;
         }
     }
-	
+
     @SideOnly(Side.CLIENT)
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));

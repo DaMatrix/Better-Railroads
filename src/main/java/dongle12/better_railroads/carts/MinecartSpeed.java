@@ -13,8 +13,6 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class MinecartSpeed extends EntityMinecartEmpty {
-    private static final int[][][] MATRIX = { { { 0, 0, -1 }, { 0, 0, 1 } }, { { -1, 0, 0 }, { 1, 0, 0 } }, { { -1, -1, 0 }, { 1, 0, 0 } }, { { -1, 0, 0 }, { 1, -1, 0 } }, { { 0, 0, -1 }, { 0, -1, 1 } }, { { 0, -1, -1 }, { 0, 0, 1 } }, { { 0, 0, 1 }, { 1, 0, 0 } }, { { 0, 0, 1 }, { -1, 0, 0 } }, { { 0, 0, -1 }, { -1, 0, 0 } }, { { 0, 0, -1 }, { 1, 0, 0 } } };
-
     public MinecartSpeed(World world, double x, double y, double z) {
         super(world, x, y, z);
     }

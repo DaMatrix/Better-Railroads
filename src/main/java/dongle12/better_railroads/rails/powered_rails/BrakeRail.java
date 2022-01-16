@@ -21,6 +21,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 
 public class BrakeRail extends PoweredRail implements ITileEntityProvider {
+    private static BrakeRailEntity getTE(World world, BlockPos pos) {
+        return (BrakeRailEntity) world.getTileEntity(pos);
+    }
+
     public BrakeRail() {
         super("brake_rail");
     }
@@ -29,10 +33,6 @@ public class BrakeRail extends PoweredRail implements ITileEntityProvider {
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
         return new BrakeRailEntity();
-    }
-
-    private BrakeRailEntity getTE(World world, BlockPos pos) {
-        return (BrakeRailEntity) world.getTileEntity(pos);
     }
 
     @Override
@@ -85,11 +85,13 @@ public class BrakeRail extends PoweredRail implements ITileEntityProvider {
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     @Override
     public void onMinecartPass(World world, EntityMinecart cart, BlockPos pos) {
-        BrakeRailEntity te = this.getTE(world, pos);
+        BrakeRailEntity te = getTE(world, pos);
 
         if (world.getBlockState(pos).getValue(BlockRailPowered.POWERED)) {
-            cart.motionX = te.motionX;
-            cart.motionZ = te.motionZ;
+            if (cart.motionX == 0.0d && cart.motionZ == 0.0d) {
+                cart.motionX = Math.signum(te.motionX);
+                cart.motionZ = Math.signum(te.motionZ);
+            }
         } else {
             if (cart.motionX != 0.0d || cart.motionZ != 0.0d) {
                 te.motionX = cart.motionX;

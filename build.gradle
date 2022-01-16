@@ -15,7 +15,7 @@ apply plugin: "net.minecraftforge.gradle"
 
 version = "1.0.0"
 group = "DonglesMod"
-archivesBaseName = "Better-Railroads"
+archivesBaseName = "Better-Railroads-porkfix"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {

@@ -7,8 +7,8 @@
   "key": {
     "A": [
       {
-        "item": "minecraft:stick",
-        "data": 0
+        "type": "forge:ore_dict",
+        "ore": "stickWood"
       }
     ],
     "B": [

@@ -7,14 +7,14 @@
   "key": {
     "A": [
       {
-        "item": "minecraft:iron_ingot",
-        "data": 0
+        "type": "forge:ore_dict",
+        "ore": "nuggetIron"
       }
     ],
     "B": [
       {
-        "item": "minecraft:log",
-        "data": 0
+        "type": "forge:ore_dict",
+        "ore": "logWood"
       }
     ]
   },

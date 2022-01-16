@@ -13,8 +13,8 @@
     ],
     "B": [
       {
-        "item": "minecraft:slime",
-        "data": 0
+        "type": "forge:ore_dict",
+        "ore": "blockSlime"
       }
     ],
     "C": [
